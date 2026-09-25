@@ -1,0 +1,14 @@
+[user]
+	name = Bernard Cloutier
+	email = bernard.p.cloutier@gmail.com
+[init]
+	defaultBranch = main
+[core]
+{{ if eq .chezmoi.os "windows" }}
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+{{ end }}
+
+[gpg "ssh"]
+{{ if eq .chezmoi.os "windows" }}
+	program = C:/Windows/System32/OpenSSH/ssh-keygen.exe
+{{ end }}
