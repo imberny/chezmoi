@@ -15,14 +15,15 @@
 -- })
 
 require "config"
+require "autocmds"
 -- require('fzf-lua').setup { fzf_colors = true }
 -- require('mini.completion').setup {}
 -- require('quicker').setup {}
 -- require('gitsigns').setup {}
 -- require("everforest").load()
 require("lualine").setup {
-  options = {
-    -- ... other configuration
-    theme = "everforest", -- Can also be "auto" to detect automatically.
-  },
+    options = {
+        -- ... other configuration
+        theme = "everforest", -- Can also be "auto" to detect automatically.
+    },
 }
