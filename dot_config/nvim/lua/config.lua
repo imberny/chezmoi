@@ -54,7 +54,9 @@ vim.o.confirm = true
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- Quit
-vim.keymap.set({ "n" }, "<leader>q", ":qa<cr>", { desc = "Quit Neovim", silent = true })
+vim.keymap.set({ "n" }, "<leader>Q", ":qa<cr>", { desc = "Quit Neovim", silent = true })
+-- Close buffer
+vim.keymap.set({ "n" }, "<leader>q", ":q<cr>", { desc = "Close buffer", silent = true })
 -- Navigate splits
 vim.keymap.set({ "n" }, "<C-h>", ":wincmd h<cr>", { silent = true })
 vim.keymap.set({ "n" }, "<C-j>", ":wincmd j<cr>", { silent = true })
