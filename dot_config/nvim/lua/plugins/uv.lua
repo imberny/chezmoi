@@ -8,15 +8,15 @@ return {
         -- or
         --   "nvim-telescope/telescope.nvim"
     },
-    opts = {
-        picker_integration = true,
-        keymaps = false,
-    },
-    config = function()
+    opts = function(_, opts)
+        opts.spec = opts.spec or {}
         local wk = require "which-key"
         wk.add {
             { "<leader>p", mode = { "n", "v" }, group = "python", icon = { cat = "filetype", name = "python" } },
         }
+
+        opts.picker_integration = true
+        opts.keymaps = false
     end,
     keys = {
         {
@@ -34,7 +34,7 @@ return {
         {
             "<leader>ps",
             mode = { "n", "v" },
-            "<C-u>UVRunSelection<cr>",
+            ":<C-u>UVRunSelection<cr>",
             desc = "uv run selection",
             ft = "python",
         },
