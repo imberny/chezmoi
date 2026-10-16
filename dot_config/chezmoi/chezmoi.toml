@@ -1,0 +1,5 @@
+[data]
+email = "bernard.p.cloutier@gmail.com"
+
+[edit]
+command = "nvim"
