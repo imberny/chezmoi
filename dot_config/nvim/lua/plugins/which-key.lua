@@ -10,11 +10,12 @@ return {
     config = function() -- I couldn't find a way to add group labels in keys or opts
         local wk = require "which-key"
         wk.add {
-            { "<leader>b", group = "buffer" },
+            { "<leader>b", group = "buffers" },
             { "<leader>f", group = "find" },
             { "<leader>g", group = "git" },
             { "<leader>l", group = "lsp" },
             { "<leader>s", group = "search" },
+            { "<leader>S", group = "session" },
             { "<leader>u", group = "ui" },
             { "<leader>x", group = "diagnostics" },
         }
@@ -23,7 +24,7 @@ return {
         {
             "<leader>?",
             function() require("which-key").show { global = false } end,
-            desc = "Buffer Local Keymaps (which-key)",
+            desc = "Buffer Local Keymaps",
         },
     },
 }

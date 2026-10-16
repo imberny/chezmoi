@@ -14,11 +14,10 @@ return {
     keys = {
         -- Top Pickers & Explorer
         { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-        { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
+        { "<leader>bb", function() Snacks.picker.buffers() end, desc = "Buffers" },
         { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
         { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
         { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-        { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
         -- find
         { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
         {
@@ -38,22 +37,20 @@ return {
         { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
         { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
         { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
-        -- gh
+        -- github
         { "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
         { "<leader>gI", function() Snacks.picker.gh_issue { state = "all" } end, desc = "GitHub Issues (all)" },
         { "<leader>gp", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
         { "<leader>gP", function() Snacks.picker.gh_pr { state = "all" } end, desc = "GitHub Pull Requests (all)" },
-        -- Grep
+        -- search
         { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
         { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
-        { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
         {
             "<leader>sw",
             function() Snacks.picker.grep_word() end,
             desc = "Visual selection or word",
             mode = { "n", "x" },
         },
-        -- search
         { '<leader>s"', function() Snacks.picker.registers() end, desc = "Registers" },
         { "<leader>s/", function() Snacks.picker.search_history() end, desc = "Search History" },
         { "<leader>sa", function() Snacks.picker.autocmds() end, desc = "Autocmds" },
@@ -74,6 +71,8 @@ return {
         { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
         { "<leader>sR", function() Snacks.picker.resume() end, desc = "Resume" },
         { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
+        { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
+        { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
         -- UI
         { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
         -- LSP
@@ -84,7 +83,5 @@ return {
         { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
         { "gai", function() Snacks.picker.lsp_incoming_calls() end, desc = "C[a]lls Incoming" },
         { "gao", function() Snacks.picker.lsp_outgoing_calls() end, desc = "C[a]lls Outgoing" },
-        { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
-        { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
     },
 }

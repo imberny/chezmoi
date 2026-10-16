@@ -11,9 +11,9 @@ return {
             },
         }
         -- Resession does NOTHING automagically, so we have to set up some keymaps
-        vim.keymap.set("n", "<leader>ss", resession.save)
-        vim.keymap.set("n", "<leader>sl", resession.load)
-        vim.keymap.set("n", "<leader>sd", resession.delete)
+        vim.keymap.set("n", "<leader>Ss", resession.save, { desc = "Save Session" })
+        vim.keymap.set("n", "<leader>Sl", resession.load, { desc = "Load Session" })
+        vim.keymap.set("n", "<leader>Sd", resession.delete, { desc = "Delete Session" })
 
         vim.api.nvim_create_autocmd("VimEnter", {
             callback = function()

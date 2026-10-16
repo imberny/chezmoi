@@ -3,6 +3,7 @@ return {
     config = true,
     opts = {
         filter_type = "SHADE",
-        filter_percent = 0.15,
+        filter_percent = 0.20,
     },
+    event = "UiEnter",
 }
