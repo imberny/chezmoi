@@ -20,10 +20,4 @@ require "autocmds"
 -- require('mini.completion').setup {}
 -- require('quicker').setup {}
 -- require('gitsigns').setup {}
--- require("everforest").load()
-require("lualine").setup {
-    options = {
-        -- ... other configuration
-        theme = "everforest", -- Can also be "auto" to detect automatically.
-    },
-}
+require("lualine").setup {} -- needs to be explicitely called for some reason
