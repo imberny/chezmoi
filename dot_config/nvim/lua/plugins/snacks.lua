@@ -15,7 +15,6 @@ return {
         -- Top Pickers & Explorer
         { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
         { "<leader>bb", function() Snacks.picker.buffers() end, desc = "Buffers" },
-        { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
         { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
         { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
         -- find
@@ -59,6 +58,7 @@ return {
         { "<leader>sC", function() Snacks.picker.commands() end, desc = "Commands" },
         { "<leader>sd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
         { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
+        { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
         { "<leader>sh", function() Snacks.picker.help() end, desc = "Help Pages" },
         { "<leader>sH", function() Snacks.picker.highlights() end, desc = "Highlights" },
         { "<leader>si", function() Snacks.picker.icons() end, desc = "Icons" },

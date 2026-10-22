@@ -80,6 +80,8 @@ vim.keymap.set({ "v" }, "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up", silent 
 vim.keymap.set({ "v" }, "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down", silent = true })
 -- Put below
 vim.keymap.set({ "n" }, "P", "<cmd>pu<cr>", { desc = "Put below current line", silent = true })
+-- Toggle comment
+vim.keymap.set({ "n" }, "<leader>/", "gcc", { desc = "Toggle Comment", remap = true, silent = true })
 -- Save buffer
 vim.keymap.set({ "n" }, "<C-s>", "<esc><cmd>wa<cr>", { desc = "Save buffer", silent = true })
 vim.keymap.set({ "i" }, "<C-s>", "<esc><cmd>wa<cr>", { desc = "Save buffer", silent = true })
